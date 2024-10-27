@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pop-Up Alerts</title>
+  </head>
+  <body>
+    <button onclick="alertBox()">Alert Box</button>
+    <h2>Java Script Prompt</h2>
+    <button onClick="promptBox()">Try it</button>
+    <p id="Name"></p>
+    <form>
+      <p id="Another-text">Are u a human?</p>
+      <button onclick="confirmBox()">Check</button>
+    </form>
+  </body>
+  <script>
+    function alertBox() {
+      alert("Alert Box appeared");
+    }
+    function promptBox() {
+      let text;
+      let person = prompt("Enter your name:");
+      if (person == null || person == "") {
+        text = "No Prompt";
+      } else {
+        text = "Hello " + person;
+      }
+      document.getElementById("Name").innerHTML = text;
+    }
+    function confirmBox() {
+      let conVal = confirm("Are you sure");
+      if (conVal == true) {
+        document.getElementById("Another-text").innerHTML = "Yes u are";
+      } else {
+        document.getElementById("Another-text").innerHTML = "Maybe ur not";
+      }
+    }
+  </script>
+</html>

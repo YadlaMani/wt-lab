@@ -1,0 +1,71 @@
+body {
+  margin: 0;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  background-color: powderblue;
+  color: #333;
+  overflow-x: hidden;
+}
+.header {
+  display: grid;
+  grid-template-columns: auto;
+  padding: 20px;
+  background-color: brown;
+  color: white;
+  align-items: center;
+  justify-content: space-evenly;
+  transition: background-color 0.4s ease-in-out;
+}
+.header:hover {
+  background-color: chocolate;
+}
+nav {
+  display: flex;
+  justify-content: space-around;
+  gap: 15px;
+}
+nav a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  transition: color 0.2s ease-in;
+}
+nav a:hover {
+  color: aliceblue;
+  text-decoration: underline;
+  padding-bottom: 20px;
+}
+.content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 40px;
+}
+.grid-item {
+  border: 2px solid black;
+  margin: 5px;
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.grid-item:hover {
+  animation: rgb 0.4s infinite;
+}
+
+@keyframes rgb {
+  0% {
+    background-color: white;
+  }
+  25% {
+    background-color: red;
+  }
+  50% {
+    background-color: green;
+  }
+  75% {
+    background-color: blue;
+  }
+  100% {
+    background-color: white;
+  }
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Callbacks, Promises, and Async/Await</title>
+  </head>
+  <body>
+    <h1>Async JS</h1>
+    <button onclick="fetchWithCallback()">Fetch with Callback</button>
+    <button onclick="fetchWithPromise()">Fetch with promise</button>
+    <button onclick="fetchWithAsync()">Fetch with Async</button>
+    <p id="results">Results will appear here</p>
+    <script>
+      const result = document.getElementById("results");
+      function fetchWithCallback() {
+        simulateFetch("CallBack", (error, data) => {
+          if (error) {
+            result.textContent = "Something went wrong";
+          } else {
+            result.textContent = "CallbackResult: " + JSON.stringify(data);
+          }
+        });
+      }
+      function simulateFetch(type, callBack) {
+        result.textContent = `Fetching data with ${type}...`;
+        setTimeout(() => {
+          const data = { userId: 1, name: "Mani" };
+          callBack(null, data);
+        }, 1000);
+      }
+      function fetchWithPromise() {
+        result.textContent = "Fetching data with Promise...";
+        simulateFetch()
+          .then((data) => {
+            result.textContent = "Promise result:" + JSON.stringify(data);
+          })
+          .catch((error) => {
+            result.textContent = "Something went wrong";
+          });
+      }
+      function simulateFetch() {
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            const data = { userId: 2, name: "Mani" };
+            resolve(data);
+          }, 1000);
+        });
+      }
+      async function fetchWithAsync() {
+        result.textContent = "Fetching data with async..";
+        try {
+          const data = await simulateFetch();
+          result.textContent = "Async result: " + JSON.stringify(data);
+        } catch (error) {
+          result.textContent = "Something went wrong";
+        }
+      }
+    </script>
+  </body>
+</html>
