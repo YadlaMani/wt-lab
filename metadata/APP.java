@@ -1,8 +1,8 @@
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.DatabaseMetaData;
+import java.sql.DriverManager;
 class APP{
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception{
         String url="jdbc:mysql://127.0.01:2206/TEMP";
         String user="root";
         String password="1234";

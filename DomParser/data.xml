@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+    <root_node>
+       <child_node1>C1</child_node1>
+       <child_node2>C2</child_node2>
+    </root_node>
+    <root_node>
+        <child_node1>V1</child_node1>
+        <child_node2>V2</child_node2>
+    </root_node>
+</data>
