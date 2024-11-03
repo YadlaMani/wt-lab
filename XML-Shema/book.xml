@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<book xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="/wt-lab/XML-Shema/schema.xsd">
+    <title>The Pragmatic Programmer</title>
+    <author>Andrew Hunt, David Thomas</author>  
+    <isbn>978-0135957059</isbn>
+    <publisher>Addison-Wesley</publisher>
+    <edition>2nd</edition>
+    <price>45.99</price>
+</book>
