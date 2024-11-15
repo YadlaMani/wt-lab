@@ -1,7 +1,7 @@
 import java.sql.*;
 public class rs {
     public static void main(String[] args) {
-        try(Connection conn=DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/demo","root","5002@hsakA")){
+        try(Connection conn=DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/demo","root","----")){
             Statement st=conn.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, 
             ResultSet.CONCUR_READ_ONLY
 );
